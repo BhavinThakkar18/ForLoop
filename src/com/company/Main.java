@@ -32,6 +32,25 @@ public class Main {
         }
         return sum;
     }
+    public static int sumDigits(int num)
+    {
+        int sum=0;
+        int d=0;
+        if(num>=10)
+        {
+            while(num>0) {
+
+                d = num % 10;
+                num = num / 10;
+                sum += d;
+            }
+            return sum;
+        }
+        else
+        {
+            return -1;
+        }
+    }
     public static void main(String[] args) {
 	// write your code here
         int count=0;
@@ -51,11 +70,13 @@ public class Main {
 //
 //        }
 //        System.out.println("Sum="+sum);
-        System.out.println(sumOdd(1,100));
-        System.out.println(sumOdd(-1,100));
-        System.out.println(sumOdd(100,100));
-        System.out.println(sumOdd(13,13));
-        System.out.println(sumOdd(100,-100));
-        System.out.println(sumOdd(100,1000));
+//        System.out.println(sumOdd(1,100));
+//        System.out.println(sumOdd(-1,100));
+//        System.out.println(sumOdd(100,100));
+//        System.out.println(sumOdd(13,13));
+//        System.out.println(sumOdd(100,-100));
+//        System.out.println(sumOdd(100,1000));
+        System.out.println(sumDigits(125));
+        System.out.println(sumDigits(10225));
     }
 }

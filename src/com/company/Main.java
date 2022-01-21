@@ -51,6 +51,35 @@ public class Main {
             return -1;
         }
     }
+    public static boolean isPalindrome(int number)
+    {
+        int reverse=0;
+        int d=0;
+
+        if(number<0)
+        {
+            number=(-1)*number;
+        }int duplicate=number;
+
+        while (number>0)
+        {
+            d=number%10;
+            reverse+=d;
+            number=number/10;
+            reverse*=10;
+        }
+        reverse/=10;
+        System.out.println(reverse);
+        if((reverse==duplicate))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
     public static void main(String[] args) {
 	// write your code here
         int count=0;
@@ -76,7 +105,18 @@ public class Main {
 //        System.out.println(sumOdd(13,13));
 //        System.out.println(sumOdd(100,-100));
 //        System.out.println(sumOdd(100,1000));
-        System.out.println(sumDigits(125));
-        System.out.println(sumDigits(10225));
+//        System.out.println(sumDigits(125));
+//        System.out.println(sumDigits(10225));
+//        System.out.println(sumDigits(-125));
+//        System.out.println(sumDigits(5));
+//        System.out.println(isPalindrome(-1221));
+//        System.out.println(isPalindrome(707));
+//        System.out.println(isPalindrome(11212));
+        System.out.println(isPalindrome(-12345));
+        System.out.println(isPalindrome(-1221));
+        System.out.println(isPalindrome(-707));
+        System.out.println(isPalindrome(11212));
+        System.out.println(isPalindrome(-222));
+
     }
 }
